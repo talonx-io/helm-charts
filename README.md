@@ -11,4 +11,12 @@ Once Helm is set up, add the repo using:
 helm repo add longbow-helm https://talonx-io.github.io/helm-charts
 ```
 
-You can then run `helm search repo longbow-helm` to see the charts.\
+To see the charts run:
+```
+helm search repo longbow-helm
+```
+
+And to install:
+```
+helm install release-name longbow-helm/longbow-kubernetes-agent
+```

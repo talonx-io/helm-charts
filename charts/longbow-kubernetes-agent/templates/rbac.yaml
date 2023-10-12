@@ -1,3 +1,5 @@
+{{- if .Values.rbac.enabled }}
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -94,6 +96,7 @@ rules:
     verbs:
       - "get"
 
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -106,3 +109,5 @@ roleRef:
   kind: ClusterRole
   name: {{ include "longbow-kubernetes-agent.fullname" . }}-clusterrole
   apiGroup: rbac.authorization.k8s.io
+
+{{- end }}
