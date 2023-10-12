@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: localhost:5000/longbow-kubernetes-agent
+  repository: public.ecr.aws/d3b0f6l0/longbow-kubernetes-agent
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
